@@ -9,27 +9,31 @@
     <style>
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 8rem;
         }
     </style>
 </head>
 
 <body class="bg-white text-gray-800 font-sans">
-    <!-- Sidebar -->
-    <div class="fixed top-0 left-0 h-full w-48 bg-green-900 text-white shadow-lg p-4 flex flex-col">
-        <div class="text-xl font-bold mb-6">Jing Jia</div>
-        <nav class="flex flex-col gap-3 text-lg">
+    <!-- Top Navbar -->
+    <header
+        class="w-full bg-lime-600 text-white shadow-lg p-4 flex flex-col sm:flex-row items-center justify-between gap-4 fixed top-0 left-0 z-50">
+        <div class="text-xl font-bold">Jing Jia</div>
+        <nav class="flex flex-wrap gap-4 text-lg">
             <a href="#about" class="hover:text-green-300">About</a>
             <a href="#papers" class="hover:text-green-300">Papers</a>
             <a href="#teaching" class="hover:text-green-300">Teaching</a>
             <a href="#cv" class="hover:text-green-300">CV</a>
         </nav>
-    </div>
+    </header>
+
 
     <!-- Main -->
-    <main class="ml-52 p-8 space-y-20 max-w-4xl">
+    <main class="mx-auto pt-32 px-4 md:px-8 max-w-4xl">
         <!-- About -->
-        <section id="about" class="flex flex-col sm:flex-row items-start gap-8">
-            <img src="assets/profile.jpeg" alt="Profile picture" class="w-40 h-40 object-cover rounded-full shadow-md" />
+        <section id="about" class="flex flex-col items-center text-left sm:flex-row sm:items-start gap-8">
+            <img src="assets/profile.jpeg" alt="Profile picture"
+                class="w-40 h-40 object-cover rounded-full shadow-md" />
             <div>
                 <h1 class="text-3xl font-bold mb-2">Jing Jia</h1>
                 <p class="text-lg mb-4">
@@ -77,11 +81,15 @@
             </div>
         </section>
 
+        <hr class="border-t border-gray-300 my-12" />
+        
         <!-- Papers -->
         <section id="papers">
             <h2 class="text-2xl font-bold mb-4 text-green-900">Papers</h2>
             <ul id="papers-list" class="space-y-4 list-disc list-inside"></ul>
         </section>
+
+        <hr class="border-t border-gray-300 my-12" />
 
         <!-- Teaching -->
         <section id="teaching">
@@ -89,6 +97,7 @@
             <ul id="teaching-list" class="space-y-4 list-disc list-inside"></ul>
         </section>
 
+        <hr class="border-t border-gray-300 my-12" />
         <!-- CV -->
         <section id="cv">
             <h2 class="text-2xl font-bold mb-4 text-green-900">Curriculum Vitae</h2>
@@ -140,7 +149,7 @@
                   ${course.semester} – ${course.institution}`;
                 teachingList.appendChild(li);
             });
-            
+
             const cvContent = document.getElementById('cv-content');
 
             // EDUCATION
