@@ -1,0 +1,44 @@
+[
+  {
+    "course": "01:198:211 - Computer Architecture",
+    "semester": "Fall 2023",
+    "role": "TA",
+    "institution": "Rutgers University",
+    "link": "https://www.cs.rutgers.edu/academics/undergraduate/course-synopses/course-details/01-198-211-computer-architecture"
+  },
+  {
+    "course": "01:198:206 - Discrete Mathematics II",
+    "semester": "Spring 2024",
+    "role": "TA",
+    "institution": "Rutgers University",
+    "link": "https://www.cs.rutgers.edu/academics/undergraduate/course-synopses/course-details/01-198-206-introduction-to-discrete-structures-ii"
+  },
+  {
+    "course": "Robotics Summer Camp for Talented High-school Students",
+    "semester": "Summer 2024",
+    "role": "Instructor",
+    "institution": "MAYFLOWER ASTEM ACADEMY",
+    "link": "https://mayflowerastem.academy/summer-camp/"
+  },
+  {
+    "course": "01:198:213 - Software Methodology",
+    "semester": "Fall 2024",
+    "role": "TA",
+    "institution": "Rutgers University",
+    "link": "https://www.cs.rutgers.edu/academics/undergraduate/course-synopses/course-details/01-198-213-software-methodology"
+  },
+  {
+    "course": "01:198:352 - Internet Technology",
+    "semester": "Spring 2025",
+    "role": "TA",
+    "institution": "Rutgers University",
+    "link": "https://www.cs.rutgers.edu/academics/undergraduate/course-synopses/course-details/01-198-352-internet-technology"
+  },
+  {
+    "course": "Robotics Summer Camp for Talented High-school Students",
+    "semester": "Summer 2025",
+    "role": "Instructor",
+    "institution": "MAYFLOWER ASTEM ACADEMY",
+    "link": "https://mayflowerastem.academy/summer-camp/"
+  }
+]

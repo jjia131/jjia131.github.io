@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Antithetic Noise in Diffusion Models",
+    "authors": "Jing Jia, Sifan Liu, Bowen Song, Wei Yuan, Liyue Shen, Guanyang Wang",
+    "venue": "arXiv preprint arXiv:2506.06185",
+    "year": "2025",
+    "link": "https://arxiv.org/abs/2506.06185"
+  },
+  {
+    "title": "Eazy: Eliminating hallucinations in LVLMs by zeroing out hallucinatory image tokens",
+    "authors": "Liwei Che, Tony Qingze Liu, Jing Jia, Weiyi Qin, Ruixiang Tang, Vladimir Pavlovic",
+    "venue": "arXiv preprint arXiv:2503.07772",
+    "year": "2025",
+    "link": "https://arxiv.org/abs/2503.07772"
+  },
+  {
+    "title": "CCS: Controllable and Constrained Sampling with Diffusion Models via Initial Noise Perturbation",
+    "authors": "Bowen Song, Zecheng Zhang, Zhaoxu Luo, Jason Hu, Wei Yuan, Jing Jia, Zhengxu Tang, Guanyang Wang, Liyue Shen",
+    "venue": "arXiv preprint arXiv:2502.04670",
+    "year": "2025",
+    "link": "https://arxiv.org/abs/2502.04670"
+  },
+  {
+    "title": "VCRS: A Novel Approach to Virtual Reality Cycling for Balance Rehabilitation",
+    "authors": "Jing Jia, Julianne D'Avirro Humphrey, Parth Darji, Binsheng Zhang, Yao Liu",
+    "venue": "Proceedings of the 1st ACM Workshop on Mobile Immersive Computing, Networking, and Systems",
+    "year": "2023",
+    "link": "https://dl.acm.org/doi/10.1145/3615452.3617940"
+  }
+]

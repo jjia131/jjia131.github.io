@@ -1,0 +1,37 @@
+{
+  "education": [
+    {
+      "degree": "Ph.D. in Computer Science",
+      "institution": "Rutgers, The State University of New Jersey",
+      "dates": "09/2023 – Present",
+      "gpa": "4.00 / 4.00"
+    },
+    {
+      "degree": "B.S. in Electrical and Computer Engineering",
+      "institution": "Rutgers, The State University of New Jersey",
+      "dates": "09/2019 – 05/2023",
+      "gpa": "3.96 / 4.00"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Co-Founder, Robotics Engineer",
+      "organization": "WLKATA Robotics",
+      "location": "Hackensack, NJ",
+      "dates": "07/2021 – Present",
+      "responsibilities": [
+        "Developed and tested software, firmware, and embedded systems for robotic arms, ensuring reliable and efficient operation",
+        "Authored curriculum aligned with educational standards, and maintained comprehensive operation documentation",
+        "Designed and refined experiments utilizing computer vision with OpenMV and YOLOv5",
+        "Conducted research on mixed reality for digital twin technology, Industry 4.0 and educational applications"
+      ]
+    }
+  ],
+  "interests": [
+    "Generative AI",
+    "Artificial Intelligence",
+    "Machine Learning",
+    "Human-Computer Interaction",
+    "Robotics"
+  ]
+}

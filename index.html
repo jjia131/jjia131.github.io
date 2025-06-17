@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jing Jia Personal Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800 font-sans">
+    <!-- Sidebar -->
+    <div class="fixed top-0 left-0 h-full w-48 bg-green-900 text-white shadow-lg p-4 flex flex-col">
+        <div class="text-xl font-bold mb-6">Jing Jia</div>
+        <nav class="flex flex-col gap-3 text-lg">
+            <a href="#about" class="hover:text-green-300">About</a>
+            <a href="#papers" class="hover:text-green-300">Papers</a>
+            <a href="#teaching" class="hover:text-green-300">Teaching</a>
+            <a href="#cv" class="hover:text-green-300">CV</a>
+        </nav>
+    </div>
+
+    <!-- Main -->
+    <main class="ml-52 p-8 space-y-20 max-w-4xl">
+        <!-- About -->
+        <section id="about" class="flex flex-col sm:flex-row items-start gap-8">
+            <img src="assets/profile.jpeg" alt="Profile picture" class="w-40 h-40 object-cover rounded-full shadow-md" />
+            <div>
+                <h1 class="text-3xl font-bold mb-2">Jing Jia</h1>
+                <p class="text-lg mb-4">
+                    I am a second-year Ph.D. student in the Department of Computer Science at Rutgers University, where
+                    I am fortunate to be advised by
+                    <a href="https://sites.google.com/site/pengzhang27182/" class="text-green-700 underline"
+                        target="_blank">Professor Peng Zhang</a>
+                    and
+                    <a href="https://guanyangwang.github.io/" class="text-green-700 underline" target="_blank">Professor
+                        Guanyang Wang</a>.
+                </p>
+                <p class="text-lg mb-4">
+                    My current research focuses on generative models, with a growing interest in posterior sampling
+                    methods. Broadly, I am fascinated by machine learning theory and its applications in intelligent
+                    systems.
+                </p>
+                <p class="text-lg mb-4">
+                    I am also passionate about robotics and education. I am the co-founder of
+                    <a href="https://www.wlkata.com/" class="text-green-700 underline" target="_blank">WLKATA
+                        Robotics</a>,
+                    where we develop embodied AI robotics solutions for educational environments.
+                </p>
+                <!-- Contact & Social -->
+                <div class="mt-6 space-y-3 text-lg">
+                    <h3 class="text-xl font-semibold text-green-900">Contact & Social</h3>
+                    <p>Email:
+                        <a href="mailto:jing.jia@rutgers.edu" class="text-green-700 underline hover:text-green-900">
+                            jing.jia@rutgers.edu
+                        </a>
+                    </p>
+                    <div class="flex gap-6 text-base">
+                        <a href="https://www.linkedin.com/in/jing-jia-9843311b0/"
+                            class="flex items-center gap-2 text-green-700 hover:text-green-900 underline"
+                            target="_blank" title="LinkedIn">
+                            🔗 LinkedIn
+                        </a>
+                        <a href="https://www.xiaohongshu.com/user/profile/5bce50eb78db6f000195848e"
+                            class="flex items-center gap-2 text-green-700 hover:text-green-900 underline"
+                            target="_blank" title="小红书 / Xiaohongshu">
+                            📕 RedNote
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Papers -->
+        <section id="papers">
+            <h2 class="text-2xl font-bold mb-4 text-green-900">Papers</h2>
+            <ul id="papers-list" class="space-y-4 list-disc list-inside"></ul>
+        </section>
+
+        <!-- Teaching -->
+        <section id="teaching">
+            <h2 class="text-2xl font-bold mb-4 text-green-900">Teaching</h2>
+            <ul id="teaching-list" class="space-y-4 list-disc list-inside"></ul>
+        </section>
+
+        <!-- CV -->
+        <section id="cv">
+            <h2 class="text-2xl font-bold mb-4 text-green-900">Curriculum Vitae</h2>
+            <div id="cv-content" class="space-y-6"></div>
+        </section>
+    </main>
+
+    <!-- Load and Populate Content -->
+    <script>
+        async function loadJSON(path) {
+            const res = await fetch(path);
+            return await res.json();
+        }
+
+        async function populateSections() {
+            // Load JSON data
+            const [papers, teaching, cv] = await Promise.all([
+                loadJSON('data/papers.json'),
+                loadJSON('data/teaching.json'),
+                loadJSON('data/cv.json')
+            ]);
+            // Papers
+            const papersList = document.getElementById('papers-list');
+            papers.forEach(paper => {
+                const li = document.createElement('li');
+                li.innerHTML = `<strong>
+                            ${paper.link
+                        ? `<a href="${paper.link}" class="text-green-700 underline" target="_blank">${paper.title}</a>`
+                        : paper.title}
+                            </strong><br />
+                            <em>${paper.venue}</em>, ${paper.year}<br />
+                            <span class="text-sm text-gray-600">${paper.authors}</span>
+                        `;
+                papersList.appendChild(li);
+            });
+
+
+
+            // Teaching
+            const teachingList = document.getElementById('teaching-list');
+            teaching.forEach(course => {
+                const li = document.createElement('li');
+                li.innerHTML = `<strong>
+                    <a href="${course.link}" class="text-green-700 underline" target="_blank">
+                      ${course.course}
+                    </a>
+                    (${course.role})
+                  </strong><br />
+                  ${course.semester} – ${course.institution}`;
+                teachingList.appendChild(li);
+            });
+            
+            const cvContent = document.getElementById('cv-content');
+
+            // EDUCATION
+            if (cv.education) {
+                const section = document.createElement('div');
+                section.innerHTML = `<h3 class="text-xl font-semibold">Education</h3>`;
+                const list = document.createElement('ul');
+                list.className = "list-disc list-inside mt-2 space-y-2";
+                cv.education.forEach(item => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `<strong>${item.degree}</strong>, ${item.institution} <br />
+                    <span class="text-sm text-gray-600">${item.dates} — GPA: ${item.gpa}</span>`;
+                    list.appendChild(li);
+                });
+                section.appendChild(list);
+                cvContent.appendChild(section);
+            }
+
+            // EXPERIENCE
+            if (cv.experience) {
+                const section = document.createElement('div');
+                section.innerHTML = `<h3 class="text-xl font-semibold">Experience</h3>`;
+                cv.experience.forEach(item => {
+                    const div = document.createElement('div');
+                    div.className = "mb-4";
+                    div.innerHTML = `<p><strong>${item.title}</strong>, ${item.organization} — ${item.location}</p>
+                     <p class="text-sm text-gray-600">${item.dates}</p>`;
+                    const ul = document.createElement('ul');
+                    ul.className = "list-disc list-inside mt-1 space-y-1";
+                    item.responsibilities.forEach(res => {
+                        const li = document.createElement('li');
+                        li.textContent = res;
+                        ul.appendChild(li);
+                    });
+                    div.appendChild(ul);
+                    section.appendChild(div);
+                });
+                cvContent.appendChild(section);
+            }
+
+            // INTERESTS, SKILLS, AWARDS (flat arrays)
+            ["interests", "skills", "awards"].forEach(key => {
+                if (cv[key]) {
+                    const section = document.createElement('div');
+                    section.innerHTML = `<h3 class="text-xl font-semibold">${key.charAt(0).toUpperCase() + key.slice(1)}</h3>
+                         <ul class="list-disc list-inside mt-2 space-y-1">
+                           ${cv[key].map(item => `<li>${item}</li>`).join('')}
+                         </ul>`;
+                    cvContent.appendChild(section);
+                }
+            });
+
+        }
+
+        populateSections();
+    </script>
+</body>
+
+</html>
