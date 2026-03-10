@@ -1,5 +1,12 @@
 [
   {
+    "title": "Weak Diffusion Priors Can Still Achieve Strong Inverse-Problem Performance",
+    "authors": "Jing Jia, Wei Yuan, Sifan Liu, Liyue Shen, Guanyang Wang",
+    "venue": "Preprint",
+    "year": "2026",
+    "link": "https://arxiv.org/abs/2601.22443"
+  },
+  {
     "title": "Balanced and Robust Multi-Treatment Experimental Designs via Randomized Differencing",
     "authors": "Qing Chen, Jing Jia, Peng Zhang (Alphabetical)",
     "venue": "AISTATS 2026",
