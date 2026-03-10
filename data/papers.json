@@ -1,22 +1,29 @@
 [
   {
+    "title": "Balanced and Robust Multi-Treatment Experimental Designs via Randomized Differencing",
+    "authors": "Qing Chen, Jing Jia, Peng Zhang (Alphabetical)",
+    "venue": "AISTATS 2026",
+    "year": "2026",
+    "link": ""
+  },
+  {
     "title": "Antithetic Noise in Diffusion Models",
     "authors": "Jing Jia, Sifan Liu, Bowen Song, Wei Yuan, Liyue Shen, Guanyang Wang",
-    "venue": "arXiv preprint arXiv:2506.06185",
+    "venue": "ICLR 2026",
     "year": "2025",
     "link": "https://arxiv.org/abs/2506.06185"
   },
   {
-    "title": "Eazy: Eliminating hallucinations in LVLMs by zeroing out hallucinatory image tokens",
+    "title": "Hallucinatory Image Tokens: A Training-free EAZY Approach to Detecting and Mitigating Object Hallucinations in LVLMs",
     "authors": "Liwei Che, Tony Qingze Liu, Jing Jia, Weiyi Qin, Ruixiang Tang, Vladimir Pavlovic",
-    "venue": "arXiv preprint arXiv:2503.07772",
+    "venue": "ICCV 2025",
     "year": "2025",
     "link": "https://arxiv.org/abs/2503.07772"
   },
   {
     "title": "CCS: Controllable and Constrained Sampling with Diffusion Models via Initial Noise Perturbation",
     "authors": "Bowen Song, Zecheng Zhang, Zhaoxu Luo, Jason Hu, Wei Yuan, Jing Jia, Zhengxu Tang, Guanyang Wang, Liyue Shen",
-    "venue": "arXiv preprint arXiv:2502.04670",
+    "venue": "NeurIPS 2025",
     "year": "2025",
     "link": "https://arxiv.org/abs/2502.04670"
   },
